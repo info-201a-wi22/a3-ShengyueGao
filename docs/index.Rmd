@@ -27,7 +27,15 @@ trends_chart
 source("../source/comparison.R")
 comparison_chart
 ```
->The comparison chart is generated using jail population rate data of King County (the county with the highest jail population rate at a specific point) from 2010 to 2018 (data of other time period is missing). The graphic is included to demonstrate the difference of jail population rate between a specific race and the total one. The pattern shown from this chart is that while the Black people, white people, and Latinx people have the jail population rate higher than the total jail population rate, Black people have the largest jail population rate difference with the total one. These racial disparities may reflect a system that treats Black people more harshly than others. 
+>The comparison chart is generated using jail population rate data of King County (the county with the highest jail population rate at a specific point) from 2010 to 2018 (data of other time period is missing). The graphic is included to demonstrate the difference of jail population rate between a specific race and the total one. Then, the readers can get insight from these differences. The pattern shown from this chart is that while the Black people, white people, and Latinx people have the jail population rate higher than the total jail population rate, Black people have the largest jail population rate difference with the total one. These racial disparities may reflect a system that treats Black people more harshly than others. 
 
 ### Map
+```{r, echo=FALSE}
+source("../source/map.R")
+map
+```
+>The map is generated using jail admission data in 2004, which is the year that has the most jail admission at some point. The map is included to show how the jail admission is distributed accross the state. The pattern shown from this map is that Texas, Florida, and California are clearly the states that have the most jail admission in 2004. By combining what this map shows and the information from the Internet that Texas, Florida, and California are some of the top states that have the largest population of Black people [1], it can be concluded that the states that have larger number of Black people have larger number of jail admission. This conclusion also shows some information about how the data differ by race. 
+
+### References
+[1] Tamir, C. (2022, January 31). The growing diversity of Black America. Pew Research Center's Social &amp; Demographic Trends Project. Retrieved February 26, 2022, from https://www.pewresearch.org/social-trends/2021/03/25/the-growing-diversity-of-black-america/ 
 

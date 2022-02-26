@@ -1,9 +1,10 @@
 library(ggplot2)
 library(plotly)
+library(dplyr)
 
 original_data <- read.csv("https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv")
 options(timeout = 1900)
-library("dplyr")
+
 
 selected_data4 <- select(original_data, c(2,4,5, 57,58,59,60,61,62))%>%
   group_by(year)%>%
