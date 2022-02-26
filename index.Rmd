@@ -4,10 +4,6 @@ author: "ShengyueGao"
 date: "2/22/2022"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ### Introduction
 In this report, I will focus on how the population (and rate) in jail (and in prison) differ by races by making comparisons and showing trends. I will use the dataset named **incarceration_trends.csv**, which is loaded in analysis.R file. For the "Summary" and "Trends over Time Chart" part, I will choose 6 columns that contain the data of _population in jail_ for 6 races, 6 columns that describe the _population in prison_, and 6 columns that describe the _prison admission_ for different races. For the "Variable Comparison Chart," I will pick 6 columns that describe the _rate_ of population that go into jail for different races and compare them with the total jail population rate. For the "Map" part, I will use the _total_jail_adm_dcrp_ column to show the jail admission in each state in the United States in 2018. The _year_, _state_, and _county_ column will also be used in some parts. The columns holding specific race can better correspond to the theme of this project, which is to see how data differ by race, so I chose these variables and measures.
 
@@ -16,23 +12,20 @@ As shown in the analysis.R file, I calculated 5 values from the dataset. 1) The 
 
 ### Trends over Time Chart
 
-```{r, echo=FALSE}
-source("../source/trends.R")
-trends_chart
+```{r, echo=FALSE, warning = FALSE, message = FALSE, code = readLines("trends.R")}
+
 ```
 >The trend chart is generated using prison population data from 1982 to 2016 (data of other time period is missing). This graphic is presented to demonstrate the various patterns in the population that goes to prison over time for different races. It's presented to help readers see how the variables vary by race. The pattern from this trend is that the Black people have the highest increasing in prison population, whereas the Asian Americans and Pacific Islanders have the lowest increasing in prison population.
 
 ### Variable Comparison Chart
-```{r, echo=FALSE}
-source("../source/comparison.R")
-comparison_chart
+```{r, echo=FALSE, warning = FALSE, message = FALSE, code = readLines("comparison.R")}
+
 ```
 >The comparison chart is generated using jail population rate data of King County (the county with the highest jail population rate at a specific point) from 2010 to 2018 (data of other time period is missing). The graphic is included to demonstrate the difference of jail population rate between a specific race and the total one. Then, the readers can get insight from these differences. The pattern shown from this chart is that while the Black people, white people, and Latinx people have the jail population rate higher than the total jail population rate, Black people have the largest jail population rate difference with the total one. These racial disparities may reflect a system that treats Black people more harshly than others. 
 
 ### Map
-```{r, echo=FALSE}
-source("../source/map.R")
-map
+```{r, echo=FALSE, warning = FALSE, message = FALSE, code = readLines("map.R")}
+
 ```
 >The map is generated using jail admission data in 2004, which is the year that has the most jail admission at some point. The map is included to show how the jail admission is distributed accross the state. The pattern shown from this map is that Texas, Florida, and California are clearly the states that have the most jail admission in 2004. By combining what this map shows and the information from the Internet that Texas, Florida, and California are some of the top states that have the largest population of Black people [1], it can be concluded that the states that have larger number of Black people have larger number of jail admission. This conclusion also shows some information about how the data differ by race. 
 
