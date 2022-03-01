@@ -15,22 +15,21 @@ In this report, I will focus on how the population (and rate) in jail (and in pr
 As shown in the analysis.R file, I calculated 5 values from the dataset. 1) The first one is highest_jail_pop, which is the highest total number of population in jail from 1970 to 2018. The white people have the highest jail population, which is 8814789. 2) The second one is lowest_jail_pop, which is the lowest population in jail from 1970 to 2018. The Other race people have the lowest jail population, which is 178066.7. 3) The third one is highest_prison_pop, which is the highest total number of population in prison from 1970 to 2018. The Black people has the highest prison population, which is 12113359. 4) The fourth one is the lowest_prison_pop, which is the population in prison from 1970 to 2018. The Asian American / Pacific Islander people have the lowest prison population, which is  110036. 5) The last one is highest_prison_adm_ave, which is the highest average number of population of prison admission each year. The Black people have the highest number of jail admission each year in average, which is 121877.
 
 ### Trends over Time Chart
-
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning = FALSE, message = FALSE, error = FALSE}
 source("../source/trends.R")
-comparison_chart
+trends_chart
 ```
 >The trend chart is generated using prison population data from 1982 to 2016 (data of other time period is missing). This graphic is presented to demonstrate the various patterns in the population that goes to prison over time for different races. It's presented to help readers see how the variables vary by race. The pattern from this trend is that the Black people have the highest increasing in prison population, whereas the Asian Americans and Pacific Islanders have the lowest increasing in prison population.
 
 ### Variable Comparison Chart
-```{r, echo=FALSE}
+```{r, echo=FALSE,warning = FALSE}
 source("../source/comparison.R")
 comparison_chart
 ```
 >The comparison chart is generated using jail population rate data of King County (the county with the highest jail population rate at a specific point) from 2010 to 2018 (data of other time period is missing). The graphic is included to demonstrate the difference of jail population rate between a specific race and the total one. Then, the readers can get insight from these differences. The pattern shown from this chart is that while the Black people, white people, and Latinx people have the jail population rate higher than the total jail population rate, Black people have the largest jail population rate difference with the total one. These racial disparities may reflect a system that treats Black people more harshly than others. 
 
 ### Map
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning = FALSE}
 source("../source/map.R")
 map
 ```
